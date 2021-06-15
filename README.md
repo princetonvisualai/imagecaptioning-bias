@@ -1,5 +1,5 @@
 # Understanding and Evaluating Racial Biases in Image Captioning
-### [Project Page](https://princetonvisualai.github.io/imagecaptioning-bias/) | Paper | Annotations
+### [Project Page](https://princetonvisualai.github.io/imagecaptioning-bias/) | Paper | [Annotations](https://forms.gle/FBi3ZsMDficweyP96)
 
 This repo provides the code for our paper "Understanding and Evaluating Racial Biases in Image Captioning."
 
