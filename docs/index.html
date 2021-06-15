@@ -1,0 +1,298 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Understanding and Evaluating Racial Biases in Image Captioning</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="mainpage.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- Conference logo -->
+<!-- <div class="row" style="text-align:center;padding:0;margin:0">
+  <div class="container">
+    <a href="https://eccv2020.eu/" target="new"><img src="imgs/cvpr2021.jpg" height="120px"></a>
+  </div>
+</div> -->
+
+
+<!-- Lab logo -->
+<!--<div class="row" style="text-align:center;padding:0;margin:0;padding-top:40;padding-bottom:10">-->
+<div class="row" style="text-align:center;padding:0;padding-top:20;padding-bottom:10;margin:0">
+  <div class="container">
+    <img src="imgs/princetonlogo.png" height="40px" style="vertical-align:middle">
+    <span style="font-size:32px;vertical-align:middle"><a href="https://visualai.princeton.edu" style="color:#ff8f00" target="_blank">Princeton Visual AI Lab</a></span>
+  </div>
+</div>
+
+<!-- Authors -->
+<div class="container-fluid">
+  <div class="row">
+    <h1><span style="font-size:36px;color:#333;font-weight:800">Understanding and Evaluating Racial Biases in Image Captioning</span></h1>
+    <div class="authors">
+      <span style="font-size:18px"><a href="https://dorazhao99.github.io/" style="color:#1075bc" target="new">Dora Zhao</a></span>
+      &nbsp;
+      <span style="font-size:18px"><a href="https://angelina-wang.github.io/" style="color:#1075bc" target="new">Angelina Wang</a></span>
+      &nbsp;
+      <span style="font-size:18px"><a href="https://www.cs.princeton.edu/~olgarus/" style="color:#1075bc" target="new">Olga Russakovsky</a></span>
+      <br>
+      <span style="font-size:18px">Princeton University</span>
+      <br>
+      <span style="font-size:18px">{dorothyz, angelina.wang, olgarus}@cs.princeton.edu<br><br></span>
+    </div>
+  </div>
+</div>
+
+<!-- Figure 1 -->
+<!-- <div class="row" style="text-align:center;padding:0;margin:0">
+  <div class="container">
+    <figure>
+     <img src="imgs/PullFigure_large.png" style="width:70%">
+      <figcaption>
+        Training a visual classifier for an attribute (e.g., wearing hat) can be complicated by correlations in the training data.
+        For example, the presence of hats can be correlated with the presence of glasses.
+        We propose a dataset augmentation strategy using Generative Adversarial Networks (GANs)
+        that successfully removes this correlation by adding or removing glasses from existing images, creating a balanced dataset.
+      </figcaption>
+    </figure>
+
+  </div>
+</div> -->
+
+<!-- Icons -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-lg-0 col-md-0 col-sm-0"></div> -->
+
+    <!--<div class="col-xs-2 col-xs-offset-1 text-center">-->
+    <div class="col-xs-2 col-xs-offset-3 text-center">
+      <div class="service-box mt-5 mx-auto">
+        <h4 class="mb-3" style="font-size:18px">
+          <a href="" target="_blank" class="button">Paper </a>
+        </h4>
+      </div>
+    </div>
+
+    <div class="col-xs-2 text-center">
+      <div class="service-box mt-5 mx-auto">
+        <h4 class="mb-3" style="font-size:18px">
+          <a href="https://github.com/dorazhao99/imagecaptioning-bias" target="_blank" class="button">Code </a>
+        </h4>
+      </div>
+    </div>
+
+
+    <div class="col-xs-2 text-center">
+      <div class="service-box mt-5 mx-auto">
+        <h4 class="mb-3" style="font-size:18px">
+          <a href="" target="_blank" class="button">Annotations </a>
+        </h4>
+      </div>
+    </div>
+
+
+    <!--
+    <div class="col-xs-2 text-center">
+      <div class="service-box mt-5 mx-auto">
+        <a href="https://youtu.be/mVU5tSxS4is" target="_blank">
+          <i class="fa fa-2x fa-video-camera text-primary mb-3 "></i>
+        </a>
+        <h4 class="mb-3" style="font-size:18px">Talk</h4>
+      </div>
+    </div>
+    -->
+
+    <!--
+    <div class="col-xs-2 text-center">
+      <div class="service-box mt-5 mx-auto">
+        <a href="https://github.com/sunniesuhyoung/DST/blob/master/dst.bib" target="_blank">
+          <i class="fa fa-3x fa-quote-right text-primary mb-3 "></i>
+        </a>
+        <h4 class="mb-3" style="font-size:18px">Bibtex</h4>
+      </div>
+    </div>
+    -->
+
+  </div>
+</div>
+
+<!-- Abstract -->
+<div class="container">
+  <h2>Abstract</h2>
+  Image captioning is an important task for benchmarking visual reasoning and for
+  enabling accessibility for people with vision impairments. However, as in many
+  machine learning settings, social biases can influence image captioning in undesirable ways.
+  In this work, we study bias propagation pathways within image captioning, focusing
+  specifically on the COCO dataset. Prior work has analyzed gender bias in captions;
+  here we focus specifically on racial biases. Our first contribution is in annotating the skin
+  color of 28,315 of the depicted people after obtaining IRB approval. Using these annotations,
+  we compare racial biases present in both manual and automatically-generated captions,
+  focusing specifically on differences between images depicting people with lighter versus darker skin.
+  We observe differences in caption accuracy, sentiment, and word choice. Most importantly,
+  we find that modern captioning systems exhibit stronger biases than older models ---
+  thus, social bias concerns are likely to become increasingly prevalent in image captioning.
+</div>
+
+<!-- Citation -->
+<div class="container">
+  <h2>Citation</h2>
+  <pre><code>
+    @article{zhao2021captionbias,
+      author = {Dora Zhao and Angelina Wang and Olga Russakovsky},
+      title = {Understanding and Evaluating Racial Biases in Image Captioning},
+      year = {2021}
+    }
+  </code></pre>
+</div>
+
+<!-- Talk -->
+<!--
+<div class="container" >
+  <h2>1 Minute Summary</h2>
+  <div>
+    <div style="width: 75%;height: 0;padding-bottom: 42%;position: relative;margin-left: auto;margin-right: auto;">
+      <iframe src="https://youtube.com/embed/7qUzfcn6TPk" allowfullscreen style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+    </div>
+  </div>
+</div>
+-->
+
+
+<!-- Method -->
+<div class="container">
+<h2>Demographic annotations on COCO</h2>
+
+We crowdsource skin color and gender annotations on the COCO 2014 validation set
+using Amazon Mechanical Turk (AMT). We use the Fitzpatrick Skin Type Scale, which ranges from
+1 (lightest) to 6 (darkest) to measure skin color, and the binary perceived gender expression.
+In total, we collect annotations for 15,762 images and 28,315 <tt>person</tt> instances.
+
+<br />
+<br />
+<center>
+  <img src="imgs/pie_charts_hoz.png" style="width:80%">
+<br />
+<br />
+</center>
+<div class="caption">
+  (Left column): Distribution of perceived skin color and gender expression of the
+  28,315 <tt>people</tt> instances.
+  <br />
+  (Middle column): Distribution after collapsing individual annotations into image-level annotations
+  <br />
+  (Right column): Distribution of self-reported demographics for AMT workers.
+</div>
+<br />
+<br />
+The annotations will be available for download upon request.
+
+</div>
+
+<!-- Analysis -->
+<div class="container">
+<h2>Analysis</h2>
+Using the crowdsourced demographic annotations, we consider both the ground-truth images
+and manual captions as well as the automatically generated captions.
+<br/>
+<br/>
+<br/>
+<center>
+  <img src="imgs/findings.png" style="width:75%">
+</center>
+
+Our analysis shows that not only does bias exist in the ground-truth data, beyond just
+the underepresentation of certain skin tone groups, but also that this bias is propagating
+into the generated captions. Furthermore, we find that newer and more advanced image
+captioning models tend to exhibit more bias.
+
+<br/>
+<br/>
+We provide an in-depth analysis of these bias propagation pathways in our paper.
+
+
+</div>
+
+<!-- Related Work -->
+<div class="container" >
+  <!-- <h2>Related Work</h2>
+  <div>
+  Below are some papers related to our work. We discuss them in more detail in the related work section of our paper.
+  </div>
+
+  &nbsp;
+
+  <div>
+    <a href="https://arxiv.org/abs/1906.06439" target="_blank">Image Counterfactual Sensitivity Analysis for Detecting Unintended Bias.</a>
+    Emily Denton, Ben Hutchinson, Margaret Mitchell, Timnit Gebru, Andrew Zaldivar.
+    CVPR 2019 Workshop on Fairness Accountability Transparency and Ethics in Computer Vision.
+  </div>
+
+  &nbsp;
+
+  <div>
+    <a href="https://arxiv.org/abs/1805.09910" target="_blank"> Fairness GAN.</a>
+    Prasanna Sattigeri, Samuel C. Hoffman, Vijil Chenthamarakshan, Kush R. Varshney.
+    IBM Journal of Research and Development 2019.
+  </div>
+
+  &nbsp;
+
+  <div>
+    <a href="https://arxiv.org/abs/2004.06524" target="_blank">Contrastive Examples for Addressing the Tyranny of the Majority.</a>
+    Viktoriia Sharmanska, Lisa Anne Hendricks, Trevor Darrell, Novi Quadrianto. arXiv 2020
+  </div>
+
+  &nbsp;
+
+  <div>
+    <a href="https://arxiv.org/abs/1910.12008" target="_blank">Fair Generative Modeling via Weak Supervision.</a>
+    Kristy Choi, Aditya Grover, Trisha Singh, Rui Shu, Stefano Ermon. ICML 2020
+  </div>
+
+  &nbsp;
+
+  <div>
+    <a href="https://arxiv.org/abs/2007.06570" target="_blank">Towards Causal Benchmarking of Bias in Face Analysis Algorithms.</a>
+    Guha Balakrishnan, Yuanjun Xiong, Wei Xia, Pietro Perona. ECCV 2020
+  </div>
+
+  &nbsp;
+
+  <div>
+    <a href="https://arxiv.org/abs/1911.11834" target="_blank">Towards Fairness in Visual Recognition: Effective Strategies for Bias Mitigation.</a>
+    Zeyu Wang, Klint Qinami, Ioannis Christos Karakozis, Kyle Genova, Prem Nair, Kenji Hata, Olga Russakovsky. CVPR 2020
+  </div> -->
+</div>
+
+<!-- Acknowledgements -->
+<div class="container">
+  <h2>Acknowledgements</h2>
+
+  This work is supported by the National Science Foundation under Grant No. 1763642
+  and the Friedland Independent Work Fund from Princeton University's School of
+  Engineering and Applied Sciences. We thank Arvind Narayanan, Sunnie S. Y. Kim,
+  Vikram V. Ramaswamy, and Zeyu Wang for their helpful comments and suggestions,
+  as well as the Amazon Mechanical Turk workers for the annotations.
+  <br/><br/>
+
+  The webpage template was adapted from this
+  <a href="https://princetonvisualai.github.io/gan-debiasing/" target="_blank">project page</a>.
+
+</div>
+
+<div class="container" >
+  <h2>Contact</h2>
+  <div><a href="https://dorazhao99.github.io/" style="color:#1075bc" target="new">Dora Zhao</a> (dorothyz@cs.princeton.edu)</div>
+</div>
+
+<div id="footer">
+</div>
+
+
+</body>
+</html>
