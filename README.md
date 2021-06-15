@@ -36,6 +36,7 @@ Place the model results in the ```results``` folder.
 ## Analyses
 All analysis files are found in the ```code``` folder.
 
+* ```find_descriptors```: Gets occurrences of descriptors 
 * ```image_appearance.py```: Analyze the simple image statistics of ground-truth COCO images.
 * ```sentiment_analysis.py```: Analyze the sentiment in ground-truth and generated captions using VADER.
 * ```caption_embeddings.py```: Analyze the differentiability of ground-truth and generated captions.
