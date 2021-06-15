@@ -39,7 +39,6 @@ All analysis files are found in the ```code``` folder.
 * ```find_descriptors```: Gets occurrences of descriptors 
 * ```image_appearance.py```: Analyze the simple image statistics of ground-truth COCO images.
 * ```sentiment_analysis.py```: Analyze the sentiment in ground-truth and generated captions using VADER.
-* ```caption_embeddings.py```: Analyze the differentiability of ground-truth and generated captions.
-* ```vocabulary_differences.py```: Analyze the differences in word choices in both ground-truth and generated captions.
+* ```caption_content.py```: Analyze the differentiability of ground-truth and generated captions.
 
 To evaluate captions, you will need to follow the setup protocol [here](https://github.com/salaniz/pycocoevalcap) for pycocoevalcap. Our evaluation code can be found in ```evaluate_captions.py```.
