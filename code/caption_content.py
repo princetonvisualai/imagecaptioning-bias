@@ -10,7 +10,7 @@ import sys, warnings, json
 import spacy_universal_sentence_encoder
 from tqdm import tqdm
 
-# Code for analyzing the differentiability of sentence embeddings
+# Code for analyzing the differentiability of caption content
 
 # convert caption into vector format
 def word2vec(nlp, caption):
