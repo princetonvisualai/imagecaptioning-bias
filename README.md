@@ -8,6 +8,9 @@ This repo provides the code for our paper "Understanding and Evaluating Racial B
        author = {Dora Zhao and Angelina Wang and Olga Russakovsky},
        title = {Understanding and Evaluating Racial Biases in Image Captioning},
        year = {2021}
+       eprint={2106.08503},
+       archivePrefix={arXiv},
+       primaryClass={cs.CV}
     }
 
 ## Requirements
