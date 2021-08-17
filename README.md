@@ -4,7 +4,7 @@
 This repo provides the code for our paper "Understanding and Evaluating Racial Biases in Image Captioning."
 
 ## Citation
-    @inproceedinings{zhao2021captionbias,
+    @inproceedings{zhao2021captionbias,
        author = {Dora Zhao and Angelina Wang and Olga Russakovsky},
        title = {Understanding and Evaluating Racial Biases in Image Captioning},
        booktitle = {International Conference on Computer Vision (ICCV)},
